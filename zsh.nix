@@ -25,6 +25,9 @@
      };
      completionInit = "autoload -U compinit && compinit -i";
      initExtra = ''
+        # so tmux knows that it should start in this shell 
+        export SHELL=$(which zsh)
+
         setopt +o nomatch
         eval "$(starship init zsh)"
 
@@ -32,6 +35,10 @@
         LIVE_COUNTER=$(ps a | awk '{print $2}' | grep -vi -e "tty*" -e "?" | uniq | wc -l);
         if [ $LIVE_COUNTER -eq 1 ]; then
           neofetch
+        fi
+        
+        if [ -f "$HOME/.extra_zshrc" ]; then
+          source "$HOME/.extra_zshrc"
         fi
      '';
      history = {

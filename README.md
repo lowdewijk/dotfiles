@@ -18,13 +18,17 @@ This repo is a little more than just some dotfiles. It uses Nix [home-manager](h
 
 Pre-requisites:
  - Nix (enable flake support)
- - Home-manager
  - Kitty
+
+NOTE: my username is set hardcoded to `lowdewijk` in home.nix. If you are not `lowdewijk` then update it there.
 
 Clone this repo then run:
 ```bash
-nix run . -- switch --flake .
+./apply.sh
 ```
 
-You should know have my version of the perfect terminal environment. Kitty should be perfect now. 
+Start kitty and enjoy!
 
+## Extra zsh config
+
+For extra zsh config please use: `$HOME/.extra_zshrc`.

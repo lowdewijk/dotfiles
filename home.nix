@@ -1,5 +1,6 @@
 { config, pkgs, catppuccin, ... }:
 {
+  # update this if you are not me
   home.username = "lowdewijk"; 
   home.homeDirectory = "/home/lowdewijk";
 
