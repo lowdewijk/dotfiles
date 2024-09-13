@@ -9,7 +9,7 @@
     catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = {nixpkgs, home-manager, flake-utils, catppuccin, ...}@inputs: 
+  outputs = {nixpkgs, home-manager, flake-utils, catppuccin, ...}: 
     flake-utils.lib.eachDefaultSystem (system: {
       defaultPackage = home-manager.defaultPackage."${system}";
 
@@ -18,10 +18,10 @@
           lowdewijk = home-manager.lib.homeManagerConfiguration {
             pkgs = import nixpkgs { inherit system; };
 
-            # where the magic happens
             modules = [ 
               catppuccin.homeManagerModules.catppuccin
-              ./home.nix 
+              # where the magic happens
+              ./home-manager/home.nix 
             ];
           };
         };

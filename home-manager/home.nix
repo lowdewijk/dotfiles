@@ -5,7 +5,7 @@
   home.homeDirectory = "/home/lowdewijk";
 
   imports = [
-    ./dotfiles.nix
+    ./extra-dotfiles.nix
     ./ssh.nix
     ./git.nix
     ./zsh.nix
@@ -34,7 +34,6 @@
     ripgrep # recursively searches directories for a regex pattern
     jq # A lightweight and flexible command-line JSON processor
     yq-go # yaml processor https://github.com/mikefarah/yq
-    
     
     # misc
     cowsay
