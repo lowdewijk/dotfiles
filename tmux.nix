@@ -29,6 +29,10 @@ in {
       catppuccin
     ];
     extraConfig = ''
+      # set zsh as the default shell
+      set -g default-command zsh
+      set -g default-shell zsh
+
       # reload config file (change file location to your the tmux.conf you want to use)
       bind r source-file ~/.config/tmux/tmux.conf
 
