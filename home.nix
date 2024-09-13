@@ -1,10 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, catppuccin, ... }:
+{
+  home.username = "lowdewijk"; 
+  home.homeDirectory = "/home/lowdewijk";
 
-let 
-  username = builtins.getEnv "USER";
-in {
   imports = [
-    <catppuccin/modules/home-manager>
     ./dotfiles.nix
     ./ssh.nix
     ./git.nix
@@ -47,9 +46,6 @@ in {
     
     lsof # list open files
   ];
-
-  home.username = username; 
-  home.homeDirectory = "/home/${username}";
 
   catppuccin.flavor = "mocha";
 

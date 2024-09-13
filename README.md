@@ -2,18 +2,29 @@
 
 This repo is a little more than just some dotfiles. It uses Nix [home-manager](https://github.com/nix-community/home-manager) to manage the entire terminal environment, including all the apps that I use on the terminal, such as neovim and tmux.
 
+## My terminal environment
+ 
+ - kitty, dotfiles are included but kitty itself is not (theme = catppuccin)
+ - tmux (theme = catppuccin)
+ - neovim (theme = catppuccin) 
+ - zsh (no oh-my-zsh, but heavily customized)
+ - git
+ - eza (instead of ls)
+ - bat (instead of cat)
+ - fzf
+ - a whole bunch of other terminal commands...
+  
 ## Installation
 
 Pre-requisites:
- - Nix
+ - Nix (enable flake support)
  - Home-manager
+ - Kitty
 
 Clone this repo then run:
 ```bash
-./home-manager.sh switch
+nix run . -- switch --flake .
 ```
 
-This will copy the files in this repo to `~/.config/home-manager` and then calls `home-manager` with the command given by the user (i.e. `switch`). 
-
-You should know have my version of the perfect terminal environment. Install `kitty` through your own package manager (dotfiles for kitty have already been generated).
+You should know have my version of the perfect terminal environment. Kitty should be perfect now. 
 
