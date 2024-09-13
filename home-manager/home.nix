@@ -22,7 +22,8 @@
     direnv
     
     neofetch
-    xsel
+    xsel # used by neovim and tmux
+    xclip # used by zsh-system-clipboard
     
     # archives
     zip
