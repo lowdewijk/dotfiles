@@ -13,7 +13,9 @@ This repo is a little more than just some dotfiles. It uses Nix [home-manager](h
  - bat (instead of cat)
  - fzf
  - a whole bunch of other terminal commands...
-  
+
+![screenshot](screenshot.png)
+
 ## Installation
 
 Pre-requisites:
