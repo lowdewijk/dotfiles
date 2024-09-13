@@ -28,15 +28,20 @@
         # so tmux knows that it should start in this shell 
         export SHELL=$(which zsh)
 
+        # remove annoying message when * result in no match
         setopt +o nomatch
+
+        # setup starship and direnv
         eval "$(starship init zsh)"
+        eval "$(direnv hook zsh)"
 
         # run neofetch the first time a console is started
         LIVE_COUNTER=$(ps a | awk '{print $2}' | grep -vi -e "tty*" -e "?" | uniq | wc -l);
         if [ $LIVE_COUNTER -eq 1 ]; then
           neofetch
         fi
-        
+
+        # run extra zshrc that is not managed by this project
         if [ -f "$HOME/.extra_zshrc" ]; then
           source "$HOME/.extra_zshrc"
         fi
