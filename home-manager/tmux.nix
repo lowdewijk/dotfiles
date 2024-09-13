@@ -45,6 +45,10 @@ in {
       bind c new-window -c "#{pane_current_path}"
       unbind p
 
+      # Start windows and panes at 1, not 0
+      set -g base-index 1
+      setw -g pane-base-index 1
+
       # Popup (toggles on ALT-SHIFT-M)
       # Got this from https://willhbr.net/2023/02/07/dismissable-popup-shell-in-tmux/
       bind -n M-A display-popup -E ${show_popup}/bin/show_popup "#{pane_current_path}"
