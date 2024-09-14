@@ -58,12 +58,6 @@
       EDITOR = "nvim";
     };
     plugins = [
-      {
-        name = "vi-mode";
-        src = pkgs.zsh-vi-mode;
-        # name of the file needs to map to what is sourced in ~/.zhsrc
-        file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
-      }
       { 
         name = "zsh-nix-shell";
         src = pkgs.zsh-nix-shell;

@@ -22,7 +22,7 @@ Pre-requisites:
  - Nix (enable flake support)
  - Kitty
 
-NOTE: my username is set hardcoded to `lowdewijk` in home.nix. If you are not `lowdewijk` then update it there.
+NOTE: my username is set hardcoded to `lowdewijk` in `home.nix`. If you are not `lowdewijk` then update it there. Also see `git.nix`.
 
 Clone this repo then run:
 ```bash
