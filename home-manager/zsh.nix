@@ -11,7 +11,7 @@
 
      shellAliases = {
        v = "nvim";
-       l = "eza";
+       l = "eza -l";
        ls = "eza";
        ll = "eza -l";
        tree = "eza --tree";
