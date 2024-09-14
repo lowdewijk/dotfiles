@@ -58,29 +58,35 @@
       EDITOR = "nvim";
     };
     plugins = [
-      rec {
+      {
         name = "vi-mode";
         src = pkgs.zsh-vi-mode;
         # name of the file needs to map to what is sourced in ~/.zhsrc
-        file = "share/zsh-${name}/${name}.plugin.zsh";
+        file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
       }
-      rec {
+      { 
+        name = "zsh-nix-shell";
+        src = pkgs.zsh-nix-shell;
+        # name of the file needs to map to what is sourced in ~/.zhsrc
+        file = "share/zsh-nix-shell/nix-shell.plugin.zsh";
+      }
+      {
         name = "system-clipboard";
         src = pkgs.zsh-system-clipboard;
         # name of the file needs to map to what is sourced in ~/.zhsrc
-        file = "share/zsh/zsh-${name}/zsh-${name}.zsh";
+        file = "share/zsh/zsh-system-clipboard/zsh-system-clipboard.zsh";
       }
-      rec {
+      {
         name = "you-should-use";
         src = pkgs.zsh-you-should-use;
         # name of the file needs to map to what is sourced in ~/.zhsrc
-        file = "share/zsh/plugins/${name}/${name}.plugin.zsh";
+        file = "share/zsh/plugins/you-should-use/you-should-use.plugin.zsh";
       }
-      rec {
+      {
         name = "bd";
         src = pkgs.zsh-bd;
         # name of the file needs to map to what is sourced in ~/.zhsrc
-        file = "share/zsh/plugins/${name}/${name}.plugin.zsh";
+        file = "share/zsh-bd/bd.plugin.zsh";
       }
     ];
  };
