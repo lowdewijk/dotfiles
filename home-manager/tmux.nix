@@ -20,7 +20,7 @@ in {
   programs.tmux = {
     enable = true;
     prefix = "C-Space";
-    terminal = "xterm-256color";
+    terminal = "screen-256color";
     escapeTime = 0;
     keyMode = "vi";
     plugins = with pkgs.tmuxPlugins; [
@@ -29,6 +29,10 @@ in {
       catppuccin
     ];
     extraConfig = ''
+      # for great colors
+      set-option -a terminal-features 'xterm-256color:RGB'
+      # set-option -a terminal-overrides 'xterm-256color:Tc'
+
       # reload config file (change file location to your the tmux.conf you want to use)
       bind r source-file ~/.config/tmux/tmux.conf
 
